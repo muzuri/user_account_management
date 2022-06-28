@@ -16,29 +16,6 @@ npm run start
 ``` 
 docker-compose up -d
 ```
-
-# Configuration File
-This is one of the important file in this project
-```
-export default {
-    "host": {
-        "url": "http://localhost",
-        "port": "3000"
-    },
-    "jwt": {
-        "secretOrKey": "secret",
-        "expiresIn": 3600000000
-    },
-    "mail":{
-        "host": "smtp.gmail.com",
-        "port": "465",
-        "secure": true,
-        "user": "muzuri31@gmail.com",
-        "pass": "nvaxwgysantqhtab"
-    }
-  } 
-```
-
 # API
 Server will listen on port `3000`, and it expose the following APIs:
 

@@ -30,42 +30,24 @@ You can edit the config is in `docker-compose.yml`.
 You can find a `config.ts` file in the root of the project.   
 Before run the server set your **db configuration** (according you are using docker or not) and your :email: [Nodemailer](https://github.com/nodemailer/nodemailer) options to be able to send emails for registration:
 ```
-# Docker Example #
-"db": {
-    "user": "root",
-    "pass": "example",
-    "host": "mongo",
-    "port": "27017",
-    "database": "testdb", 
-    "authSource": "admin"
-}
 
-# Local nodejs Example #
-"db": {
-   "user": null,
-   "pass": null,
-   "host": "localhost",
-   "port": "27017",
-   "database": "testdb",
-   "authSource": null
-}
-
-...  
-
-"host": {
-    "url": "<server-url>",  //This link is used to redirect users to your server to confirm their email address (link via email)
-    "port": "3000"
-},
-
-...
-
-"mail":{ 
-    "host": "<smtp-host>", //Nodemailer settings (go to the nodemailer documentation for further informations) - You need to set up this to make the signup api start working
-    "port": "<port>",
-    "secure": false,
-    "user": "<username>",
-    "pass": "<password>"
-}
+export default {
+    "host": {
+        "url": "http://localhost",
+        "port": "3000"
+    },
+    "jwt": {
+        "secretOrKey": "secret",
+        "expiresIn": 3600000000
+    },
+    "mail":{
+        "host": "smtp.gmail.com",
+        "port": "465",
+        "secure": true,
+        "user": "muzuri31@gmail.com",
+        "pass": "nvaxwgysantqhtab"
+    }
+  } 
 ```
 
 # API
